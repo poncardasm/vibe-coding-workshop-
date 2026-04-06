@@ -1,15 +1,20 @@
 /* Vibe Coding Workshop - Light mode only */
 
-/* CSS Reset - minimal */
+/* CSS Reset - aggressive to remove any default borders/outlines */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 html, body {
   border: none !important;
   border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
@@ -48,20 +53,25 @@ body {
   padding: 0 1rem;
 }
 
-/* Skip link for accessibility */
+/* Skip link for accessibility - completely hidden by default */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 0;
   background: var(--accent);
   color: white;
   padding: 0.5rem 1rem;
   text-decoration: none;
   z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  border: none;
 }
 
 .skip-link:focus {
   top: 0;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Typography */
