@@ -222,6 +222,7 @@ pre code {
 
 .platform-group pre {
   margin: 0.75rem 0;
+  padding: 1rem;
 }
 
 /* Troubleshooting */
@@ -267,6 +268,7 @@ pre code {
 
 .troubleshoot pre {
   margin: 0.75rem 0;
+  padding: 1rem;
 }
 
 /* Resource cards */
