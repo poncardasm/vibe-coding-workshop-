@@ -220,7 +220,7 @@ pre code {
   padding: 0 1rem;
 }
 
-.platform-group > *:not(summary):first-child {
+.platform-group > :nth-child(2) {
   padding-top: 1rem;
 }
 
@@ -286,7 +286,7 @@ pre code {
   padding: 0 1rem;
 }
 
-.troubleshoot > *:not(summary):first-child {
+.troubleshoot > :nth-child(2) {
   padding-top: 1rem;
 }
 
