@@ -220,6 +220,10 @@ pre code {
   padding: 1rem;
 }
 
+.platform-group pre {
+  margin: 0.75rem 0;
+}
+
 /* Troubleshooting */
 .troubleshoot {
   border: 1px solid var(--border);
@@ -259,6 +263,10 @@ pre code {
 
 .troubleshoot > *:not(summary) {
   padding: 1rem;
+}
+
+.troubleshoot pre {
+  margin: 0.75rem 0;
 }
 
 /* Resource cards */
