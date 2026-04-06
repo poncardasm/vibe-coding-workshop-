@@ -8,8 +8,10 @@
 }
 
 html, body {
-  border: none;
-  outline: none;
+  border: none !important;
+  border-top: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 /* CSS Variables - light mode only */
