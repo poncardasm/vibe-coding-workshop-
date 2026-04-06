@@ -217,12 +217,27 @@ pre code {
 }
 
 .platform-group > *:not(summary) {
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.platform-group > *:not(summary):first-child {
+  padding-top: 1rem;
+}
+
+.platform-group > *:not(summary):last-child {
+  padding-bottom: 1rem;
 }
 
 .platform-group pre {
   margin: 0.75rem 0;
   padding: 1rem;
+}
+
+/* Fix: Add horizontal margin so code blocks don't touch accordion borders */
+.platform-group[open] pre,
+.troubleshoot[open] pre {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 /* Troubleshooting */
@@ -263,7 +278,15 @@ pre code {
 }
 
 .troubleshoot > *:not(summary) {
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.troubleshoot > *:not(summary):first-child {
+  padding-top: 1rem;
+}
+
+.troubleshoot > *:not(summary):last-child {
+  padding-bottom: 1rem;
 }
 
 .troubleshoot pre {
