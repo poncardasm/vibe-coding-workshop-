@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+html, body {
+  border: none;
+  outline: none;
+}
+
 /* CSS Variables - light mode only */
 :root {
   --bg: #ffffff;
