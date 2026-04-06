@@ -98,6 +98,23 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Button */
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  color: white;
+  text-decoration: none;
+}
+
 /* Layout */
 .site-header {
   max-width: var(--max-width);
