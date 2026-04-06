@@ -32,7 +32,7 @@ html, body {
   --card-bg: #fafafa;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   
-  --font-body: "Google Sans Code", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: "Google Sans Code", "SF Mono", Monaco, Consolas, monospace;
   
   --max-width: 680px;
