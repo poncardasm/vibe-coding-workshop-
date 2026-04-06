@@ -228,6 +228,11 @@ pre code {
   padding-bottom: 1rem;
 }
 
+/* Fix: Ensure proper bottom padding inside expanded accordion */
+.platform-group[open] {
+  padding-bottom: 1rem;
+}
+
 .platform-group pre {
   margin: 0.75rem 0;
   padding: 1rem;
@@ -286,6 +291,11 @@ pre code {
 }
 
 .troubleshoot > *:not(summary):last-child {
+  padding-bottom: 1rem;
+}
+
+/* Fix: Ensure proper bottom padding inside expanded accordion */
+.troubleshoot[open] {
   padding-bottom: 1rem;
 }
 
