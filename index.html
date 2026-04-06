@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free AI coding workshop setup guide. Learn vibe coding with OpenCode, Google AI Studio, and OpenRouter. No paid subscriptions required.">
+  <title>Vibe Coding Workshop - Setup Guide</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  
+  <header class="site-header">
+    <h1>💻 Vibe Coding Workshop</h1>
+    <p class="tagline">Start coding with open-source AI models</p>
+  </header>
+
+  <main id="main-content">
+    <section id="setup" class="section">
+      <h2>🛠️ Pre-Workshop Setup</h2>
+      <p>Complete this before the workshop so we can start coding immediately.</p>
+
+      <h3>1️⃣ Check if you have Node.js</h3>
+      <p>Open your terminal (macOS/Linux) or PowerShell (Windows) and run:</p>
+      <pre><code>node --version</code></pre>
+      
+      <p><strong>If you see a version number (v20.x.x or higher):</strong> You have Node.js. Skip to Step 2.</p>
+      
+      <p><strong>If you get an error:</strong> Install Node.js first.</p>
+      
+      <div class="platform-tabs">
+        <details class="platform-group">
+          <summary>macOS</summary>
+          <p>Download the LTS installer from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a> and run it.</p>
+          <p>Or if you have Homebrew:</p>
+          <pre><code>brew install node</code></pre>
+        </details>
+        
+        <details class="platform-group">
+          <summary>Windows</summary>
+          <p>Download the LTS installer from <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a>.</p>
+          <p>Click through the installer with default settings, then restart PowerShell.</p>
+        </details>
+        
+        <details class="platform-group">
+          <summary>Linux</summary>
+          <p>Use your package manager. For Ubuntu/Debian:</p>
+          <pre><code>sudo apt update && sudo apt install nodejs npm</code></pre>
+        </details>
+      </div>
+
+      <h3>2️⃣ Install OpenCode</h3>
+      <p>With Node.js installed, run this command:</p>
+      <pre><code>npm install -g opencode-ai</code></pre>
+      <p>Wait for it to complete. This installs the OpenCode CLI tool.</p>
+
+      <h3>3️⃣ Verify installation</h3>
+      <pre><code>opencode --version</code></pre>
+      <p>If you see a version number, you are ready for the workshop.</p>
+
+      <h3>🩹 Troubleshooting</h3>
+      <details class="troubleshoot">
+        <summary>Command not found (macOS/Linux)</summary>
+        <p>Your npm global packages may not be in your PATH. Add this to your shell config:</p>
+        <pre><code>export PATH="$PATH:$(npm config get prefix)/bin"</code></pre>
+        <p>Then restart your terminal or run <code>source ~/.bashrc</code> (or <code>~/.zshrc</code>).</p>
+      </details>
+      
+      <details class="troubleshoot">
+        <summary>Permission denied (macOS/Linux)</summary>
+        <p>Use a Node version manager or fix npm permissions. Quick fix:</p>
+        <pre><code>sudo npm install -g opencode-ai</code></pre>
+      </details>
+      
+      <details class="troubleshoot">
+        <summary>PowerShell execution policy (Windows)</summary>
+        <p>If npm commands fail, you may need to set execution policy:</p>
+        <pre><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code></pre>
+      </details>
+    </section>
+
+    <section id="resources" class="section">
+      <h2>📚 Workshop Resources</h2>
+      
+      <h3>🔑 Get a free API key (choose one)</h3>
+      
+      <div class="resource-card">
+        <h4>🌟 Google AI Studio (Recommended)</h4>
+        <p><strong>Free tier:</strong> 1,500 requests per day on Gemini 2.5 Pro</p>
+        <ol>
+          <li>Go to <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com/app/apikey</a></li>
+          <li>Click "Create API key"</li>
+          <li>Copy your key</li>
+          <li>In your terminal, run: <code>export GEMINI_API_KEY=your-key-here</code></li>
+        </ol>
+      </div>
+      
+      <div class="resource-card">
+        <h4>🔌 OpenRouter</h4>
+        <p><strong>Free tier:</strong> Access to Claude, GPT-4o, Llama with rate limits. Starts with $5-10 credit.</p>
+        <ol>
+          <li>Sign up at <a href="https://openrouter.ai" target="_blank" rel="noopener">openrouter.ai</a></li>
+          <li>Go to Settings → API Keys</li>
+          <li>Create a key</li>
+          <li>In your terminal, run: <code>export OPENROUTER_API_KEY=your-key-here</code></li>
+        </ol>
+      </div>
+
+      <h3>📖 Official Documentation</h3>
+      <ul>
+        <li><a href="https://opencode.ai/docs" target="_blank" rel="noopener">OpenCode Documentation</a></li>
+        <li><a href="https://github.com/opencode-ai/opencode" target="_blank" rel="noopener">OpenCode GitHub</a></li>
+      </ul>
+    </section>
+
+    <section id="reference" class="section">
+      <h2>⌨️ Live Reference</h2>
+      <p>Quick commands to use during the workshop.</p>
+
+      <h3>🚀 Starting OpenCode</h3>
+      <pre><code># With built-in free tier
+opencode
+
+# With Gemini
+export GEMINI_API_KEY=your-key
+opencode
+
+# With OpenRouter
+export OPENROUTER_API_KEY=your-key
+opencode</code></pre>
+
+      <h3>⚡ Essential Commands</h3>
+      <table class="command-table">
+        <thead>
+          <tr>
+            <th>Command</th>
+            <th>What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/help</code></td>
+            <td>Show all available commands</td>
+          </tr>
+          <tr>
+            <td><code>/cost</code></td>
+            <td>Check your token usage and cost</td>
+          </tr>
+          <tr>
+            <td><code>/undo</code></td>
+            <td>Revert the last change</td>
+          </tr>
+          <tr>
+            <td><code>/models</code></td>
+            <td>List available AI models</td>
+          </tr>
+          <tr>
+            <td><code>Ctrl+C</code></td>
+            <td>Cancel the current AI request</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>🔄 Model switching</h3>
+      <pre><code># Inside OpenCode, switch models with:
+/model gemini-2.5-pro
+
+# Or for OpenRouter:
+/model openrouter/anthropic/claude-3.5-sonnet</code></pre>
+
+      <h3>⏱️ Free tier limits</h3>
+      <ul>
+        <li><strong>Google AI Studio:</strong> 1,500 requests/day</li>
+        <li><strong>OpenRouter free:</strong> Rate limited, $5-10 starting credit</li>
+        <li><strong>OpenCode built-in:</strong> ~50 messages/day</li>
+      </ul>
+      <p>If you hit limits, switch providers or wait for the next day.</p>
+    </section>
+
+    <section id="next" class="section">
+      <h2>🎓 After the Workshop</h2>
+      
+      <h3>💪 Keep practicing</h3>
+      <p>Build small projects. Break things. Ask the AI to fix them. That is vibe coding.</p>
+      
+      <h3>👥 Community</h3>
+      <p>Join the chat to ask questions and share what you build.</p>
+      
+      <h3>⬆️ Level up</h3>
+      <ul>
+        <li>Try different models (Claude, GPT-4o, local models via Ollama)</li>
+        <li>Explore <a href="https://aider.chat" target="_blank" rel="noopener">Aider</a> for more advanced workflows</li>
+        <li>Read about <a href="https://github.com/opencode-ai/opencode" target="_blank" rel="noopener">OpenCode on GitHub</a></li>
+      </ul>
+
+      <h3>📹 Recording</h3>
+      <p>If available, the workshop recording will be linked here after the event.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Last updated: April 6, 2025</p>
+    <p>Questions? Reach out on Discord or Telegram.</p>
+  </footer>
+</body>
+</html>
