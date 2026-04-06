@@ -53,27 +53,6 @@ body {
   padding: 0 1rem;
 }
 
-/* Skip link for accessibility - completely hidden by default */
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 0;
-  background: var(--accent);
-  color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  z-index: 100;
-  opacity: 0;
-  pointer-events: none;
-  border: none;
-}
-
-.skip-link:focus {
-  top: 0;
-  opacity: 1;
-  pointer-events: auto;
-}
-
 /* Typography */
 h1, h2, h3, h4 {
   font-weight: 600;
